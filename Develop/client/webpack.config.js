@@ -3,8 +3,6 @@ const WebpackPwaManifest = require('webpack-pwa-manifest');
 const path = require('path');
 const { InjectManifest } = require('workbox-webpack-plugin');
 
-// TODO: Add CSS loaders and babel to webpack.
-
 module.exports = () => {
   return {
     mode: 'development',
@@ -16,6 +14,10 @@ module.exports = () => {
       filename: '[name].bundle.js',
       path: path.resolve(__dirname, 'dist'),
     },
+    devServer: {
+      hot: 'only', 
+    },
+
     plugins: [
       //webpack plugin for html files
       new HtmlWebpackPlugin({
@@ -34,8 +36,8 @@ module.exports = () => {
         name: "Text Editor",
         short_name: "Editor",
         description: "Edit text for notes or other daily needs",
-        background_color: "",
-        theme_color: "",
+        background_color: "#225ca3",
+        theme_color: "#225ca3",
         start_url: "./",
         publicPath: "./",
         icons: [
@@ -48,8 +50,25 @@ module.exports = () => {
       }),
     ], 
     module: {
-      rules: [    
-    ],
+      //CSS loaders
+      rules: [ 
+        {
+          test: /\.css$/i,
+          use: ['style-loader', 'css-loader'],
+        },
+        {
+          test:/\.m?js$/,
+          excludes: /node_modules/,
+          //babel-loader
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-proposal-object-rest-spread', '@babel/transform-runtime'],
+            },
+          },
+        },  
+      ],
     },
   };
 };

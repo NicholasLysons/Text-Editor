@@ -3,6 +3,14 @@ import Editor from './editor';
 import './database';
 import '../css/style.css';
 
+if(module.hot) {
+  module.hot.accept((err) => {
+    if (err) {
+      console.error('Cannot apply HMR update.', err);
+    }
+  });
+}
+
 const main = document.querySelector('#main');
 main.innerHTML = '';
 
@@ -31,3 +39,7 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
+
+//navigator.serviceworker
+  //.register('./sw.js')
+  //.then((register)) => console.log(register));
