@@ -8,22 +8,19 @@ Here is what the app can do:
 
 ## Manifest:
 
-
+[image]
 
 ## Service Worker:
 
-
+[image]
 
 ## IndexedDB:
 
 
-
-
+[image]
 
 ## Author Links
 
-GitHub:
-
-Heroku:
+Authors heroku repo URL:
 
 
