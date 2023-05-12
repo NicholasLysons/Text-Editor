@@ -8,19 +8,25 @@ Here is what the app can do:
 
 ## Manifest:
 
-[image]
+[App Screenshot](https://docs.google.com/document/d/1FbP-flbgjHcxPo0luqe5hZFEQIJbY1G1AyGN6m9Y0pc/edit?usp=sharing)
+
 
 ## Service Worker:
 
-[image]
+[App Screenshot](https://docs.google.com/document/d/1PbKetekDZehcot-sgWdFcJ8_OhXL7s9xD9OtRtp3ME0/edit?usp=sharing)
 
 ## IndexedDB:
 
+[App Screenshot](https://docs.google.com/document/d/12QJ9BLrEx_pXYOoeeHZqXzclRaebG71GZWyYJrhAWLk/edit?usp=sharing)
 
-[image]
+## Author
 
-## Author Links
+Authors heroku repo URL: 
 
-Authors heroku repo URL:
+https://dashboard.heroku.com/apps/fathomless-caverns-82030/deploy/heroku-git
+
+Author Github URL:
+
+https://github.com/NicholasLysons/Text-Editor/tree/main
 
 
